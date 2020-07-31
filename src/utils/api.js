@@ -7,5 +7,6 @@ export const getCurrentTemprature = async (lat, lon) => {
     method: 'GET',
   };
   const response = await fetchHelper(fetch, url, config);
+  console.log({response});
   return response;
 };

@@ -17,7 +17,7 @@ export default StyleSheet.create({
     borderWidth: 4,
     marginLeft: 5,
     position: 'absolute',
-    top: 2,
-    right: -25,
+    top: 20,
+    right: -28,
   },
 });

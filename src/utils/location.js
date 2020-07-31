@@ -8,6 +8,7 @@ export const requestLocationPermission = async setLocation => {
       Geolocation.requestAuthorization('whenInUse');
       Geolocation.getCurrentPosition(
         position => {
+          console.log(position);
           setLocation(position);
         },
         error => {
@@ -28,8 +29,10 @@ export const requestLocationPermission = async setLocation => {
         },
       );
       if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+        console.log('We have ur Location');
         Geolocation.getCurrentPosition(
           position => {
+            console.log(position);
             setLocation(position);
           },
           error => {

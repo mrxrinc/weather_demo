@@ -13,7 +13,7 @@ export default () => {
     let interval = setInterval(() => {
       backgroundSwitcher(setBg);
     }, 60 * 1000);
-    return function cleanup() {
+    return () => {
       clearInterval(interval);
     };
   }, []);
